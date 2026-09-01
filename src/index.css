@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0B0B0B;
+    color: #FFFFFF;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  input, textarea {
+    user-select: text;
+  }
+}
+
+/* Custom scrollbar for modern sleek dark aesthetics */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A2A;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3E3E3E;
+}
+
+/* Glass & Glow utilities */
+.rays-glow {
+  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.25);
+}
+
+.rays-subtle-glow {
+  box-shadow: 0 0 15px -3px rgba(245, 158, 11, 0.15);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+@keyframes record-ripple {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 0.3; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+.animate-record-ripple {
+  animation: record-ripple 1.5s infinite cubic-bezier(0, 0, 0.2, 1);
+}
+

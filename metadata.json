@@ -1,0 +1,6 @@
+{
+  "name": "RAYS",
+  "description": "Private, minimal, two-person messaging app connecting exactly two people in one persistent conversation.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
